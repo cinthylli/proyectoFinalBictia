@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root{
+            --img-width:375px;
+            --img-height:250px;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Muli', sans-serif;
+        }
+        .carousel{
+            width: 100%;
+            overflow: scroll;
+            padding: 30px;
+            position: relative;
+            
+        }
+        .carousel__container{
+            white-space: nowrap;
+            margin: 70px 0px;
+            padding-bottom: 10px;
+        }
+        .carousel-item{
+            width: var(--img-width);
+            height: var(--img-height);
+            border-radius: 5px;
+            background-color: palevioletred;
+            margin-right:10px; 
+            overflow:hidden;
+            display:inline-block;
+            cursor: pointer;
+            transition: (450ms all);
+            transform-origin: center left;
+            position: relative;
+
+        }
+        .carousel-item:hover ~ .carousel-item{
+            transform: translate3d(30px, 0, 0);
+        }
+
+        .carousel__container:hover .carousel-item {
+            opacity: 0.3;
+        }
+        
+        .carousel__container:hover .carousel-item:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        .carousel-item__img {
+            width:var(--img-width);
+            height:var(--img-height);
+            object-fit: cover;
+        }
+
+        .carousel-item__details{
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+            font-size:10px;
+            opacity: 0;
+            transition: 450 ms opacity;
+            padding: 10%;
+            position: absolute;
+            top: 0;
+            left:0;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .carousel-item__details:hover{
+            opacity:1;
+        }
+
+        .logo{
+            width: 20px;
+            height: 20px;
+            object-fit:cover;
+        }
+        .carousel-item__details--city{
+            color:#041B4F;
+            font-size:1.5em;
+            font-weight:bold;
+            margin:0;
+            padding-bottom:1px;
+        }
+        .carousel-item__details--price{
+            margin:0;
+            color:white;
+            font-size:1.2em;
+            padding-bottom:1px;
+        }
+    </style>
+</head>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/811029/pexels-photo-811029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Carretera curva con arboles">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__logo-corazon logo" src="amorBlanco.png" alt="corazon" srcset="">
+                        <!-- <img class="carousel-item__logo-comprar logo" src="plus.png" alt="" srcset=""> -->
+                    </div>
+                    <p class="carousel-item__details--city">Paris</p>
+                    <p class="carousel-item__details--price">$354.552 COP/promedio por noche</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                
+            </div>
+            <div class="carousel-item">
+                
+            </div>
+            <div class="carousel-item">
+                
+            </div>
+            <div class="carousel-item">
+                
+            </div>
+            <div class="carousel-item">
+                
+            </div>
+            <div class="carousel-item">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
